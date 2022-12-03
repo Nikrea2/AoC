@@ -11,7 +11,6 @@ namespace Day2_2022P2
             {
                 subs = null;
                 subs = line.Split(' ');
-                System.Console.WriteLine(subs[0] + " " + subs[1]);
                 if (subs[0].Equals("A") && subs[1].Equals("X"))
                 {
                     n = n + 3 + 0;
