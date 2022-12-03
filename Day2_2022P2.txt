@@ -1,0 +1,58 @@
+namespace Day2_2022P2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 0;
+            string[] subs;
+
+            foreach (string line in System.IO.File.ReadLines(@"File.txt"))
+            {
+                subs = null;
+                subs = line.Split(' ');
+                System.Console.WriteLine(subs[0] + " " + subs[1]);
+                if (subs[0].Equals("A") && subs[1].Equals("X"))
+                {
+                    n = n + 3 + 0;
+                }
+                if (subs[0].Equals("B") && subs[1].Equals("X"))
+                {
+                    n = n + 1 + 0;
+                }
+                if (subs[0].Equals("C") && subs[1].Equals("X"))
+                {
+                    n = n + 2 + 0;
+                }
+                if (subs[0].Equals("A") && subs[1].Equals("Y"))
+                {
+                    n = n + 1 + 3;
+                }
+                if (subs[0].Equals("B") && subs[1].Equals("Y"))
+                {
+                    n = n + 2 + 3;
+                }
+                if (subs[0].Equals("C") && subs[1].Equals("Y"))
+                {
+                    n = n + 3 + 3;
+                }
+                if (subs[0].Equals("A") && subs[1].Equals("Z"))
+                {
+                    n = n + 2 + 6;
+                }
+                if (subs[0].Equals("B") && subs[1].Equals("Z"))
+                {
+                    n = n + 3 + 6;
+                }
+                if (subs[0].Equals("C") && subs[1].Equals("Z"))
+                {
+                    n = n + 1 + 6;
+                }
+            }
+
+            int result = n;
+            System.Console.WriteLine("Your score is: " + result);
+            System.Console.ReadLine();
+        }
+    }
+}
